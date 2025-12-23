@@ -14,7 +14,7 @@ export const projects = [
     repoUrl: "#"
   },
   {
-    id: 2,
+    id: 2,  
     title: "CYBER_ESTATE",
     category: "Real Estate Platform",
     year: "2023",
