@@ -1,0 +1,58 @@
+export const projects = [
+  {
+    id: 1,
+    title: "NEON_FINANCE",
+    category: "Fintech Dashboard",
+    year: "2024",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop",
+    description: "A real-time cryptocurrency trading platform with high-frequency data visualization.",
+    fullDescription: "Neon Finance redefines the trading experience with a lightning-fast interface powered by WebSockets. We focused on reducing latency and visualized complex datasets using D3.js. The dark mode UI ensures reduced eye strain for traders working long hours.",
+    client: "FinTech Sol",
+    tags: ["React", "D3.js", "WebSocket"],
+    techStack: ["React", "Redux", "D3.js", "Node.js", "Socket.io"],
+    liveUrl: "#",
+    repoUrl: "#"
+  },
+  {
+    id: 2,
+    title: "CYBER_ESTATE",
+    category: "Real Estate Platform",
+    year: "2023",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2573&auto=format&fit=crop", 
+    description: "Virtual reality property tours integrated into a seamless booking marketplace.",
+    fullDescription: "Cyber Estate leverages WebGL and Three.js to provide immersive 3D walkthroughs of properties directly in the browser. This project aimed to bridge the gap between physical visits and digital browsing.",
+    client: "Estate Ventures",
+    tags: ["Next.js", "Three.js", "Stripe"],
+    techStack: ["Next.js", "Three.js", "Stripe API", "PostgreSQL"],
+    liveUrl: "#",
+    repoUrl: "#"
+  },
+  {
+    id: 3,
+    title: "AI_NEXUS",
+    category: "AI SaaS Interface",
+    year: "2024",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2532&auto=format&fit=crop",
+    description: "Generative AI content creation suite with a node-based workflow editor.",
+    fullDescription: "AI Nexus offers a modular, node-based interface for chaining AI models together. The challenge was to create a performant drag-and-drop system that could handle complex logic flows.",
+    client: "Neurall Labs",
+    tags: ["Vue", "Python", "TensorFlow"],
+    techStack: ["Vue.js", "FastAPI", "TensorFlow", "Redis"],
+    liveUrl: "#",
+    repoUrl: "#"
+  },
+  {
+    id: 4,
+    title: "ECO_TRACK",
+    category: "Sustainability App",
+    year: "2023",
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2613&auto=format&fit=crop",
+    description: "Carbon footprint tracking for enterprise supply chains.",
+    fullDescription: "Eco Track helps large enterprises monitor their supply chain emmissions. We built a robust dashboard with granular reporting and export capabilities.",
+    client: "Green Future",
+    tags: ["React Native", "Node.js", "GraphQL"],
+    techStack: ["React Native", "Apollo GraphQL", "Node.js", "MongoDB"],
+    liveUrl: "#",
+    repoUrl: "#"
+  },
+];

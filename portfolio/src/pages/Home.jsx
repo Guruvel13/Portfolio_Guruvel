@@ -23,7 +23,7 @@ const Home = () => {
           </div>
           <a href="/work" className="group flex items-center gap-2 px-6 py-3 bg-white text-black font-mono text-sm font-bold uppercase tracking-widest hover:bg-primary transition-colors">
             View Projects
-            <span className="group-hover:translate-x-1 transition-transform">-></span>
+            <span className="group-hover:translate-x-1 transition-transform">{'->'}</span>
           </a>
         </div>
       </section>
