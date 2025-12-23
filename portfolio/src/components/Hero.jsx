@@ -64,8 +64,7 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter mb-6 leading-[0.9]"
         >
-          GURU <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">VEL</span>
+          GURU <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">VEL</span>
         </motion.h1>
 
         <motion.p
