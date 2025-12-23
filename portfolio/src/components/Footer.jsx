@@ -4,19 +4,24 @@ const Footer = () => {
   return (
     <footer className="bg-surface border-t border-white/10 py-12 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        
+
         <div className="text-center md:text-left">
           <h2 className="text-2xl font-bold mb-2">LET'S BUILD SOMETHING.</h2>
-          <a href="mailto:hello@guru.dev" className="text-primary hover:text-white transition-colors font-mono text-lg">
-            hello@guru.dev
+          <a href="mailto:letters2gurvel@gmail.com" className="text-primary hover:text-white transition-colors font-mono text-lg">
+            letters2gurvel@gmail.com
           </a>
         </div>
 
         <div className="flex gap-6">
-          {['Twitter', 'GitHub', 'LinkedIn', 'Dribbble'].map((social) => (
-             <a key={social} href="#" className="text-gray-500 hover:text-primary transition-colors text-sm font-mono uppercase">
-               {social}
-             </a>
+          {[
+            { name: 'GitHub', url: 'https://github.com/Guruvel13' },
+            { name: 'LinkedIn', url: 'https://linkedin.com' },
+            { name: 'Twitter', url: '#' },
+            { name: 'Dribbble', url: '#' }
+          ].map((social) => (
+            <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors text-sm font-mono uppercase">
+              {social.name}
+            </a>
           ))}
         </div>
 
