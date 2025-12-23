@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
+import PixelReveal from '../components/PixelReveal';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
@@ -17,6 +18,7 @@ const Home = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
+            <PixelReveal />
             <Hero />
             <Features />
 

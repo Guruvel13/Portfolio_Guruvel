@@ -16,8 +16,6 @@ const Footer = () => {
           {[
             { name: 'GitHub', url: 'https://github.com/Guruvel13' },
             { name: 'LinkedIn', url: 'https://linkedin.com' },
-            { name: 'Twitter', url: '#' },
-            { name: 'Dribbble', url: '#' }
           ].map((social) => (
             <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors text-sm font-mono uppercase">
               {social.name}
