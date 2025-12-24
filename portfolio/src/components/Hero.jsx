@@ -59,7 +59,7 @@ const Hero = () => {
         style={{ y: y1 }}
         className="absolute inset-0 z-0 opacity-20 pointer-events-none"
       >
-        <div className="absolute top-20 left-10 w-24 h-24 border border-white/10 rounded-full" />
+        <div className="absolute top-20 left-10 w-24 h-24 border border-border rounded-full" />
         <div className="absolute top-40 right-20 w-32 h-32 border border-primary/20 rounded-full" />
         <div className="absolute bottom-20 left-1/3 w-16 h-16 bg-white/5 rotate-45" />
       </motion.div>
@@ -67,8 +67,8 @@ const Hero = () => {
       {/* Floating Pixels / Code Debris */}
       <motion.div style={{ y: y2 }} className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/40 rounded-full blur-[1px]" />
-        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-white/20 rounded-sm" />
-        <div className="absolute bottom-1/3 left-10 text-xs font-mono text-white/10">const future = true;</div>
+        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-surface rounded-sm" />
+        {/* <div className="absolute bottom-1/3 left-10 text-xs font-mono text-muted/30">const future = true;</div> */}
         <div className="absolute bottom-10 right-10 text-xs font-mono text-primary/10">while(alive) code();</div>
       </motion.div>
 
@@ -98,7 +98,7 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter mb-4 leading-[0.9]"
         >
-          GURU <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">VEL</span>
+          GURU <span className="text-transparent bg-clip-text bg-gradient-to-r from-text to-muted">VEL</span>
         </motion.h1>
 
         {/* Dynamic Typing Text */}
@@ -108,7 +108,7 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="h-8 mb-6 font-mono text-primary text-sm md:text-lg tracking-widest uppercase"
         >
-          I AM A <span className="text-white">{text}</span>
+          I AM A <span className="text-text">{text}</span>
           <span className="animate-pulse">|</span>
         </motion.div>
 
@@ -116,7 +116,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="max-w-xl mx-auto text-gray-400 font-mono text-sm md:text-base mb-8"
+          className="max-w-xl mx-auto text-muted font-mono text-sm md:text-base mb-8"
         >
           Turning ideas into reliable software products with modern web and backend technologies.
           I build systems that are simple to use, hard to break, and ready to scale.
@@ -128,15 +128,15 @@ const Hero = () => {
           transition={{ delay: 0.8 }}
           className="flex flex-col items-center gap-8"
         >
-          <Link to="/about" className="px-8 py-3 bg-white text-black font-mono text-sm font-bold uppercase tracking-widest hover:bg-primary transition-colors rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,85,0,0.3)]">
+          <Link to="/about" className="px-8 py-3 bg-text text-background font-mono text-sm font-bold uppercase tracking-widest hover:bg-primary transition-colors rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,85,0,0.3)]">
             About Me
           </Link>
 
           <div className="flex gap-4">
-            <a href="https://github.com/Guruvel13" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/10 rounded-full bg-white/5 hover:bg-white hover:text-black transition-all hover:scale-110">
+            <a href="https://github.com/Guruvel13" target="_blank" rel="noopener noreferrer" className="p-3 border border-border rounded-full bg-surface/50 hover:bg-text hover:text-background transition-all hover:scale-110">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/10 rounded-full bg-white/5 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all hover:scale-110">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 border border-border rounded-full bg-surface/50 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all hover:scale-110">
               <Linkedin size={24} />
             </a>
           </div>

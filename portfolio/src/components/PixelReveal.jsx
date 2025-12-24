@@ -49,7 +49,7 @@ const PixelReveal = () => {
                         delay: Math.random() * 1.5, // Random delay between 0s and 1.5s
                         ease: [0.33, 1, 0.68, 1]
                     }}
-                    className="w-[5vw] h-[10vh] bg-[#111] border-[0.5px] border-black" // 20 cols = 5vw, 10 rows=10vh
+                    className="w-[5vw] h-[10vh] bg-background border-[0.5px] border-background" // 20 cols = 5vw, 10 rows=10vh
                 />
             ))}
         </div>
