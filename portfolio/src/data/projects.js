@@ -1,17 +1,17 @@
 export const projects = [
   {
     id: 1,
-    title: "NEON_FINANCE",
+    title: "FinTrack",
     category: "Fintech Dashboard",
-    year: "2024",
+    year: "2025",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop",
     description: "A real-time cryptocurrency trading platform with high-frequency data visualization.",
     fullDescription: "Neon Finance redefines the trading experience with a lightning-fast interface powered by WebSockets. We focused on reducing latency and visualized complex datasets using D3.js. The dark mode UI ensures reduced eye strain for traders working long hours.",
     client: "FinTech Sol",
     tags: ["React", "D3.js", "WebSocket"],
     techStack: ["React", "Redux", "D3.js", "Node.js", "Socket.io"],
-    liveUrl: "#",
-    repoUrl: "#"
+    liveUrl: "https://personal-finance-seven-pink.vercel.app/",
+    repoUrl: "https://github.com/Guruvel13/Personal-Finance"
   },
   {
     id: 2,  
@@ -25,7 +25,7 @@ export const projects = [
     tags: ["Next.js", "Three.js", "Stripe"],
     techStack: ["Next.js", "Three.js", "Stripe API", "PostgreSQL"],
     liveUrl: "#",
-    repoUrl: "#"
+    repoUrl: "https://github.com/Guruvel13/PantryPal"
   },
   {
     id: 3,
@@ -38,8 +38,8 @@ export const projects = [
     client: "Neurall Labs",
     tags: ["Vue", "Python", "TensorFlow"],
     techStack: ["Vue.js", "FastAPI", "TensorFlow", "Redis"],
-    liveUrl: "#",
-    repoUrl: "#"
+    liveUrl: "https://system-design-explainer-gdgawpzbl8j8taepdcjxjx.streamlit.app/",
+    repoUrl: "https://github.com/Guruvel13/System-Design-Explainer"
   },
   {
     id: 4,
