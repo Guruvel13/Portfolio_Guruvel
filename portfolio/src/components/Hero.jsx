@@ -1,21 +1,55 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Github, Linkedin, MousePointer2 } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const ref = useRef(null);
   const { scrollY } = useScroll();
 
-  // Parallax effects for main content
+  // Parallax effects
   const y = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 500], [1, 0.9]);
-
-  // Parallax for background elements (different speeds)
   const y1 = useTransform(scrollY, [0, 500], [0, -100]);
   const y2 = useTransform(scrollY, [0, 500], [0, -200]);
-  const y3 = useTransform(scrollY, [0, 500], [0, -50]);
+
+  // Typing Effect State
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const phrases = [
+    "FULL STACK DEVELOPER",
+    "WEB DEVELOPER",
+    "PROBLEM SOLVER",
+    "TECH ENTHUSIAST"
+  ];
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const i = loopNum % phrases.length;
+      const fullText = phrases[i];
+
+      setText(isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 50 : 150);
+
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), 1500);
+      } else if (isDeleting && text === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed]);
 
   return (
     <section ref={ref} className="relative min-h-screen flex flex-col items-center justify-center pt-32 overflow-hidden">
@@ -62,10 +96,21 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter mb-6 leading-[0.9]"
+          className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter mb-4 leading-[0.9]"
         >
           GURU <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">VEL</span>
         </motion.h1>
+
+        {/* Dynamic Typing Text */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="h-8 mb-6 font-mono text-primary text-sm md:text-lg tracking-widest uppercase"
+        >
+          I AM A <span className="text-white">{text}</span>
+          <span className="animate-pulse">|</span>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -97,19 +142,6 @@ const Hero = () => {
           </div>
         </motion.div>
       </motion.div>
-
-      {/* Scroll Indicator */}
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500 flex flex-col items-center gap-2"
-        style={{ opacity: useTransform(scrollY, [0, 100], [1, 0]) }}
-      >
-        <span className="text-[10px] font-mono tracking-widest uppercase">Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
-      </motion.div> */}
-
     </section>
   );
 };
