@@ -75,7 +75,7 @@ const About = () => {
                                 <div>
                                     <h4 className="font-bold text-sm text-white mb-3">FRAMEWORKS</h4>
                                     <div className="flex flex-wrap gap-2">
-                                        {['React', 'Next.js', 'Spring Boot', 'Tailwind', 'Node.js'].map(skill => (
+                                        {['React', 'Next.js', 'Spring Boot', 'Tailwind', 'Node.js','Streamlit'].map(skill => (
                                             <span key={skill} className="px-3 py-1 bg-white/5 text-xs rounded border border-white/5 text-gray-300 hover:text-white hover:border-primary/50 transition-colors">
                                                 {skill}
                                             </span>
@@ -166,22 +166,40 @@ const About = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             {
-                                title: "AWS Certified Solutions Architect",
-                                issuer: "Amazon Web Services",
-                                year: "2023",
+                                title: "AWS Academy Cloud Foundations",
+                                issuer: "AWS Academy",
+                                year: "2025",
                                 id: "AWS-BSA-29381"
                             },
                             {
-                                title: "Meta Frontend Developer Professional",
-                                issuer: "Meta (Coursera)",
-                                year: "2022",
+                                title: "MongoDB",
+                                issuer: "Infosys SpringBoard",
+                                year: "2025",
                                 id: "META-FE-9921"
                             },
                             {
-                                title: "Google UX Design Certificate",
-                                issuer: "Google",
-                                year: "2021",
+                                title: "React",
+                                issuer: "Infosys SpringBoard",
+                                year: "2025",
                                 id: "G-UX-8821"
+                            },
+                            {
+                                title: "Exploring Internet of Things ",
+                                issuer: "Cisco Networking Academy",
+                                year: "2025",
+                                id: "G-UX-81"
+                            },
+                            {
+                                title: "Networking Basics",
+                                issuer: "Cisco Networking Academy",
+                                year: "2025",
+                                id: "G-8821"
+                            },
+                            {
+                                title: "Fundamentals of Deep Learning",
+                                issuer: "NVIDIA",
+                                year: "2025",
+                                id: "8821"
                             }
                         ].map((cert, i) => (
                             <div key={i} className="bg-surface border border-white/5 p-6 rounded hover:border-primary/50 transition-colors group relative overflow-hidden">
@@ -192,7 +210,7 @@ const About = () => {
                                 <h3 className="font-bold text-lg mb-1 group-hover:text-white transition-colors relative z-10">{cert.title}</h3>
                                 <p className="text-sm text-gray-500 font-mono mb-4 relative z-10">{cert.issuer} • {cert.year}</p>
 
-                                <div className="font-mono text-[10px] text-gray-600 mb-2 relative z-10">ID: {cert.id}</div>
+                                {/* <div className="font-mono text-[10px] text-gray-600 mb-2 relative z-10">ID: {cert.id}</div> */}
 
                                 <div className="w-full h-1 bg-white/5 rounded overflow-hidden relative z-10">
                                     <div className="h-full bg-primary w-full origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
